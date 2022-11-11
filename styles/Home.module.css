@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&family=Oxygen:wght@300;400;700&display=swap");
+
+/* BODY */
+.container {
+  background-color: rgb(250 250 250);
+}
+/* NAVBAR */
+.smallNav {
+  background-color: #212121;
+  color: #fbfcfc;
+  height: 10vh;
+}
+.smallNav > p:nth-child(1) {
+  padding: 10px;
+  font-family: "Oxygen", sans-serif;
+  float: left;
+}
+.smallNav > p:nth-child(2) {
+  color: #fbfcfc;
+  padding: 10px;
+  font-family: "Oxygen", sans-serif;
+  float: right;
+}
+/* BIG NAVBAR */
+.navigation {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: #fff;
+  color: black;
+}
+.brandName {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.navigationMenu {
+  margin-left: auto;
+}
+.navigationMenu ul {
+  display: flex;
+  padding: 0;
+}
+.navigationMenu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigationMenu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: #212121;
+}
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .smallNav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navigationMenu ul {
+    display: none;
+  }
+  .navigationMenu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  .navigationMenu li {
+    text-align: center;
+    margin: 0;
+  }
+  .navigationMenu li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .navigationMenu li:hover {
+    background-color: #eee;
+  }
+.navigationMenu.expanded ul {
+    display: block;
+  }
+}
+/* HEROBANNER */
+.imageOne,
+.imageTwo,
+.imageThree {
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+  margin-top: -15px;
+}
+.imageOne {
+  background-image: url("../public/img/hero_engagement.jpeg");
+}
+.imageTwo {
+  background-image: url("../public/img/hero_bespoke.jpeg");
+}
+.imageThree {
+  background-image: url("../public/img/hero_ruby.jpg");
+}
+.imageText,
+.imageTextTwo {
+  padding: 15% 10%;
+}
+.imageText > p:nth-child(1) {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  line-height: 29px;
+  letter-spacing: 0.98px;
+}
+.imageText > p:nth-child(2) {
+  font-family: "Oxygen", sans-serif;
+  font-size: 0.98rem;
+  line-height: 40px;
+  letter-spacing: 0.98px;
+}
+.button {
+  font-family: "Oxygen", sans-serif;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #212121;
+}
+.imageTextTwo > p:nth-child(1) {
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  line-height: 40px;
+  letter-spacing: 0.98px;
+}
+.imageTextTwo > p:nth-child(2) {
+  color: #fff;
+  font-family: "Oxygen", sans-serif;
+  font-size: 0.98rem;
+  letter-spacing: 0.98px;
+}
+.buttonTwo {
+  font-family: "Oxygen", sans-serif;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: blue;
+}
+.buttonThree {
+  font-family: "Oxygen", sans-serif;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #e0115f;
+}
+@media (max-width: 768px) {
+  .imageText,
+  .imageTextTwo {
+    text-align: center;
+    transform: translate(0%, 40%);
+  }
+  .imageText > p:nth-child(2) {
+    line-height: 20px;
+    margin-top: -10px;
+  }
+  .imageTextTwo > p:nth-child(1) {
+    font-size: 2.5rem;
+  }
+}
+/* SPECIES */
+.specieWrapper {
+  margin-top: 10px;
+}
+.rawImg {
+  background-image: url("../public/img/gold.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+.rawText {
+  font-family: "Josefin sans", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  letter-spacing: 0.098rem;
+}
+.slug {
+  font-size: 1rem;
+  letter-spacing: 0.079rem;
+  font-family: "Oxygen", sans-serif;
+  margin-top: -10px;
+}
+.specieCard {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.polishImg {
+  background-image: url("../public/img/sapphire.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+.colWrapper {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.col1 {
+  background-image: url("../public/img/raw.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 65vh;
+}
+.col2 {
+  background-color: aliceblue;
+  padding-bottom: 20px;
+}
+.socialIcon {
+  display: flex;
+  justify-content: center;
+}
+.connectText {
+  text-align: center;
+}
+.connectText > p:nth-child(1) {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.1rem;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.connectText > p:nth-child(2) {
+  margin-top: -10px;
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+.connectText > p:nth-child(3) {
+  font-family: "Oxygen", sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  padding: 0px 20px;
+}
+.iconButton {
+  display: flex;
+  justify-content: center;
+}
+.videoWrapper {
+  margin-top: 20px;
+  background-color: #ecf0f1;
+  height: 50vh;
+}
+.videoCol {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+}
+.video {
+  position: absolute;
+  min-width: 100%;
+  z-index: 1;
+  height: 50vh;
+}
+.video > p {
+  position: absolute;
+  color: #fff;
+  z-index: 100;
+}
+
+/* NOTICE */
+.noticeWrapper {
+  margin-top: 20px;
+  background-color: #ecf0f1;
+  width: auto;
+}
+.header {
+  display: grid;
+  place-content: center;
+  margin-top: 10%;
+  padding: 10px 25px;
+}
+.header > p:nth-child(1) {
+  font-size: 2.5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+.header > p:nth-child(2) {
+  font-size: 1.1rem;
+  font-family: "Oxygen", sans-serif;
+  text-align: justify;
+  letter-spacing: 0.078rem;
+  font-weight: light;
+}
+.noticeImg,
+.noticeImg2,
+.levelDown,
+.levelDown2 {
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+}
+.levelDown {
+  background-image: url("../public/img/stone.jpg");
+}
+.levelDown2 {
+  background-image: url("../public/img/gold_ring.jpg");
+}
+.noticeImg {
+  background-image: url("../public/img/mineral-2382040_1920.jpg");
+}
+.noticeImg2 {
+  background-image: url("../public/img/pyrite-626549_1920.jpg");
+}
+.sideFlex {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .video {
+    display: hidden;
+  }
+  .sideFlex {
+    display: hidden;
+  }
+  .noticeWrapper {
+    background-image: url("../public/img/ring.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .col1 {
+    display: none;
+  }
+  .noticeWrapper {
+    height: 60vh;
+  }
+  .contact {
+    border: none !important;
+  }
+}
+
+/* WHYUS */
+.whyWrapper {
+  background-color: #fbfcfc;
+  padding-bottom: 30px;
+}
+.whyWrapper > p:nth-child(1) {
+  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  padding-top: 20px;
+}
+.whyWrapper > p:nth-child(2) {
+  padding: 20px;
+  text-align: justify;
+  font-size: 1.2rem;
+  font-family: "Oxygen", sans-serif;
+  text-transform: capitalize;
+}
+.whyWrapper > p:nth-child(3) {
+  padding: 0px 20px;
+  margin-top: -20px;
+  opacity: 0.6;
+  text-align: justify;
+  font-size: lighter;
+  font-family: "Oxygen", sans-serif;
+}
+.table > ul > li {
+  font-family: "Oxygen", sans-serif;
+  opacity: 0.6;
+}
+/* CONTACT US */
+.contactWrapper {
+  background-color: #ecf0f1;
+  padding-bottom: auto;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+.contact {
+  border-right: 1px solid #566573;
+  height: 30vh;
+}
+.contact > p:nth-child(1) {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 10%;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.flex > p {
+  color: #566573;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  font-family: "Oxygen", sans-serif;
+}
+.helpline > p:nth-child(1) {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 10%;
+}
+.helpline > p:nth-child(2) {
+  color: #566573;
+  text-align: center;
+}
+.helpline > p:nth-child(3) {
+  color: #566573;
+  text-align: center;
+}
+.helpline > p:nth-child(4) {
+  color: #566573;
+  text-align: center;
+}
+/* FOOTER */
+.contactArea {
+  padding: 60px 0;
+}
+.contactSocial ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contactArea {
+  border-bottom: 1px solid #353c46;
+}
+
+.contactContent p {
+  font-family: "Oxygen", sans-serif;
+  font-size: 15px;
+  margin: 30px 0 60px;
+  position: relative;
+}
+
+.contactContent p::after {
+  font-family: "Oxygen", sans-serif;
+  background: #353c46;
+  bottom: -30px;
+  content: "";
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 80%;
+}
+
+.contactContent h6 {
+  font-family: "Oxygen", sans-serif;
+  color: #8b9199;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.contactContent span {
+  color: #353c47;
+  margin: 0 10px;
+}
+
+.contactSocial {
+  margin-top: 30px;
+}
+
+.contactSocial > ul {
+  display: inline-flex;
+}
+
+.contactSocial ul li a {
+  font-family: "Oxygen", sans-serif;
+  border: 1px solid #8b9199;
+  color: #8b9199;
+  display: inline-block;
+  height: 40px;
+  margin: 0 10px;
+  padding-top: 7px;
+  transition: all 0.4s ease 0s;
+  width: 40px;
+}
+
+.contactSocial ul li a:hover {
+  border: 1px solid #fab702;
+  color: #fab702;
+}
+
+.contactContent img {
+  max-width: 210px;
+}
+.contactArea {
+  margin-top: 20px;
+}
+.footer {
+  margin-bottom: 0px;
+}
+.contactArea,
+.footer {
+  background: rgb(250 250 250);
+  color: #2c3e50;
+}
+
+.footer p {
+  font-family: "Oxygen", sans-serif;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer img {
+  width: 44px;
+}
